@@ -1,0 +1,65 @@
+﻿@model ConsultaModel
+@{
+    ViewData["Title"] = "Confirmação de apagar Consulta";
+}
+
+<div class="container">
+<form class="bg-form mt-5 form-defult shadow-lg">
+    <div class="row">
+        <div class="mt-3  mb-3 d-grid gap-2 col-12 mx-auto">
+            <h1 class="text-center fw-bold display-6">Consulta</h1>
+        </div>
+
+        <div class=" col-md-12 mb-2 p-1 mt-3">
+            <label class="form-label" for="inputGroupSelect01">Dentista</label>
+            <input class="form-control" id="example-date" disabled value="@Model.Dentista.Nome">
+            </select>
+        </div>
+        <div class=" col-md-7 mb-2 p-1 mt-3">
+            <label for="example-date" class="form-label">Data da consulta</label>
+            <input class="form-control" id="example-date" disabled value="@Model.DataConsulta.Date.ToString(" dd/MM/yyyy")">
+        </div>
+        <div class=" col-md-5 mb-2 p-1 mt-3">
+            <label for="example-date" class="form-label">Horario</label>
+            <input class="form-control" id="example-date" disabled value="@Model.DataConsulta.ToString("HH:mm")">
+        </div>
+        <div class=" col-md-5 mb-2 p-1 mt-3">
+            <label for="example-date" class="form-label">Duração</label>
+            <input class="form-control" id="example-date" disabled value="@Model.DuracaoConsulta.ToString("HH:mm")">
+        </div>
+
+
+
+        <div class=" col-md-7 mb-2 p-1 mt-3">
+            <label class="form-label" for="inputGroupSelect01">Paciente</label>
+            <input class="form-control" id="example-date" disabled value="@Model.Paciente.Nome">
+        </div>
+
+
+
+
+
+
+        <div class="mb-12 col-md-6  p-1">
+            <label for="example-email" class="form-label">Procedimento</label>
+            <input class="form-control" id="example-date" disabled value="@Model.Procedimento">
+        </div>
+
+
+        <div class="mb-3 col-md-12  p-1">
+            <label for="example-email" class="form-label">Obs</label>
+            <textarea class="form-control" id="example-textarea" asp-for="Observacao" disabled rows="5">@Model.Observacao</textarea>
+        </div>
+
+
+    </div>
+
+
+
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <a class="btn btn-danger btn-center" role="button" asp-controller="Consulta" asp-action="Apagar" asp-route-id="@Model.Id">Apagar</a>
+        <a class="btn btn-warning btn-center" role="button" asp-controller="Consulta" asp-action="Editar" asp-route-id="@Model.Id">Cancelar</a>
+
+    </div>
+</form>
+</div>

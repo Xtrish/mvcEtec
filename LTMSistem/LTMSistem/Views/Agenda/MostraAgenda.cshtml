@@ -1,0 +1,152 @@
+﻿@using LTMSistem.Enums
+@model AgendaGerenicModel
+
+
+
+@{
+    DateTime alo = DateTime.Today;
+}
+<div class="contentAgenda mt-4">
+    <div class="infoAgenda">
+        <main>
+            <div class="agends ">
+                <button type="button" class="btn btn-primary " style="border: 1px solid rgba(0, 0, 0, 0.2);
+          padding: 20px;
+          border-radius: 5px;
+          margin: 30px 0px;" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        data-bs-whatever="getbootstrap">
+                    &#10009 Nova Consulta
+                </button>
+
+
+
+
+                <span class="aHoje display-hidden" style="color: #fff;">
+                    <h1>Agendamento de @DateTime.Now.AddDays(2).ToString("M") </h1>
+                </span>
+
+                <span style="color: #fff;">
+
+                    <h1>Agendamento de @Model.DataDia.Date.ToString("dd") de  @Model.DataDia.ToString("MMMM")  </h1>
+                </span>
+                <div class="textoAgenda " style="margin-top:20px; overflow-y: scroll; ">
+
+                    @if (Model != null && Model.Consultas.Any())
+                    {
+                        foreach (var consulta in Model.Consultas)
+                        {
+                            <div class="display-flex row-cols m-2 back-lista p-1">
+                                <div class="d-flex flex-column   ">
+                                    <span class="d-block bg-white rounded-2 p-1 mt-1">@consulta.DataConsulta.ToString(" HH:mm")</span>
+                                    <span class="text-white text-center">Até</span>
+                                    <span class="d-block bg-white rounded-2 p-1 mt-1">@consulta.DataFinal.ToString(" HH:mm")</span>
+
+                                </div>
+                                <a class="mt-1 mb-1 text-decoration-none" asp-controller="Consulta" asp-action="Mostrar" asp-route-id="@consulta.Id">
+
+                                    <p class="m-auto display-2 ">
+                                        <strong class="fw-bold mb-1">Procedimento:</strong> @consulta.Procedimento <br>
+                                        <strong class="fw-bold mb-1">Paciente:</strong> @consulta.Paciente.Nome<br>
+                                        <strong class="fw-bold mb-1">Doutor(a):</strong> @consulta.Dentista.Nome
+                                    </p>
+                                </a>
+                            </div>
+                        }
+                    }
+
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="calendar" style="background: #242038;">
+        <header class="mes" style="color: #fff;">
+            <div class="anterior" onclick="moveDate('anterior')"><span>&#10094</span></div>
+            <div>
+                <h1 id="month"></h1>
+                <h6 id="date_str"></h6>
+            </div>
+            <div class="proximo" onclick="moveDate('proximo')"><span>&#10095</span></div>
+        </header>
+        <div class="semana">
+            <div>Dom</div>
+            <div>Seg</div>
+            <div>Ter</div>
+            <div>Qua</div>
+            <div>Qui</div>
+            <div>Sex</div>
+            <div>Sab</div>
+        </div>
+        <div class="dias">
+        </div>
+    </div>
+
+
+</div>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" style="color: black;" id="exampleModalLabel">Nova Consulta</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="color:#fff; ">&#10006;</button>
+            </div>
+            <div class="modal-body">
+                <form asp-controller="Consulta" asp-action="Criar" method="post">
+                    <div class="mb-3">
+                        <label for="recipient-name" style="color: black;" class="col-form-label">Procedimento:</label>
+                        <select asp-for="@Model.Procedimento" class="form-select" required>
+                            <option value="">Selecione</option>
+                            <option value="@ProcedimentoEnum.Limpeza">Limpeza</option>
+                            <option value="@ProcedimentoEnum.Restauracao ">Restauracao</option>
+                            <option value="@ProcedimentoEnum.Extracao">Extracao</option>
+                            <option value="@ProcedimentoEnum.Avaliação">Avaliação</option>
+
+
+
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="example-date" class="form-label">Dia da Consulta:</label>
+                        <input class="form-control" id="example-date" required asp-for="@Model.DataConsulta" value="">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="example-date" class="form-label">Duração</label>
+                        <input class="form-control" id="example-date" required type="time" asp-for="@Model.DuracaoConsulta" value="">
+                    </div>
+
+
+
+                    <div class="mb-3">
+                        <label for="recipient-name" style="color: black;" class="col-form-label">Paciente:</label>
+                        <select class="form-select" id="inputGroupSelect01" required asp-for="@Model.PacienteId">
+                            <option value="" selected>Selecione...</option>
+                            @foreach (var paciente in Model.Pacientes)
+                            {
+                                <option value="@paciente.Id">@paciente.Nome</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="recipient-name" style="color: black;" class="col-form-label">Doutor(a):</label>
+                        <select class="form-select" id="inputGroupSelect01" required asp-for="@Model.DentistaId">
+                            <option value="" selected>Selecione...</option>
+                            @foreach (var dentista in Model.Dentistas)
+                            {
+                                <option value="@dentista.Id">@dentista.Nome</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Concluir</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

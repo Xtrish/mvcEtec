@@ -1,0 +1,156 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = LTMSistem
+build_property.RootNamespace = LTMSistem
+build_property.ProjectDir = C:\Users\marcos.teixeira\Downloads\MVC\MVC\LTMSistem\LTMSistem\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\marcos.teixeira\Downloads\MVC\MVC\LTMSistem\LTMSistem
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/marcos.teixeira/Downloads/MVC/MVC/LTMSistem/LTMSistem/Views/Agenda/MostraAgenda.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbmRhXE1vc3RyYUFnZW5kYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marcos.teixeira/Downloads/MVC/MVC/LTMSistem/LTMSistem/Views/AlterarSenha/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx0ZXJhclNlbmhhXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marcos.teixeira/Downloads/MVC/MVC/LTMSistem/LTMSistem/Views/Consulta/ApagarConfirmacao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFcQXBhZ2FyQ29uZmlybWFjYW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marcos.teixeira/Downloads/MVC/MVC/LTMSistem/LTMSistem/Views/Consulta/Criar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFcQ3JpYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marcos.teixeira/Downloads/MVC/MVC/LTMSistem/LTMSistem/Views/Consulta/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFcRWRpdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marcos.teixeira/Downloads/MVC/MVC/LTMSistem/LTMSistem/Views/Consulta/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marcos.teixeira/Downloads/MVC/MVC/LTMSistem/LTMSistem/Views/Consulta/Mostrar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFcTW9zdHJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marcos.teixeira/Downloads/MVC/MVC/LTMSistem/LTMSistem/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marcos.teixeira/Downloads/MVC/MVC/LTMSistem/LTMSistem/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marcos.teixeira/Downloads/MVC/MVC/LTMSistem/LTMSistem/Views/Lembrete/ApagarConfirmacao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVtYnJldGVcQXBhZ2FyQ29uZmlybWFjYW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marcos.teixeira/Downloads/MVC/MVC/LTMSistem/LTMSistem/Views/Lembrete/Criar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVtYnJldGVcQ3JpYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marcos.teixeira/Downloads/MVC/MVC/LTMSistem/LTMSistem/Views/Lembrete/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVtYnJldGVcRWRpdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marcos.teixeira/Downloads/MVC/MVC/LTMSistem/LTMSistem/Views/Lembrete/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVtYnJldGVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marcos.teixeira/Downloads/MVC/MVC/LTMSistem/LTMSistem/Views/Lembrete/Mostrar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVtYnJldGVcTW9zdHJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marcos.teixeira/Downloads/MVC/MVC/LTMSistem/LTMSistem/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marcos.teixeira/Downloads/MVC/MVC/LTMSistem/LTMSistem/Views/Login/RedefinirSenha.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cUmVkZWZpbmlyU2VuaGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marcos.teixeira/Downloads/MVC/MVC/LTMSistem/LTMSistem/Views/Paciente/ApagarConfirmacao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVcQXBhZ2FyQ29uZmlybWFjYW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marcos.teixeira/Downloads/MVC/MVC/LTMSistem/LTMSistem/Views/Paciente/Criar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVcQ3JpYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marcos.teixeira/Downloads/MVC/MVC/LTMSistem/LTMSistem/Views/Paciente/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVcRWRpdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marcos.teixeira/Downloads/MVC/MVC/LTMSistem/LTMSistem/Views/Paciente/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marcos.teixeira/Downloads/MVC/MVC/LTMSistem/LTMSistem/Views/Paciente/Mostrar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVcTW9zdHJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marcos.teixeira/Downloads/MVC/MVC/LTMSistem/LTMSistem/Views/Restrito/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdHJpdG9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marcos.teixeira/Downloads/MVC/MVC/LTMSistem/LTMSistem/Views/Shared/Components/Menu/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTWVudVxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marcos.teixeira/Downloads/MVC/MVC/LTMSistem/LTMSistem/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marcos.teixeira/Downloads/MVC/MVC/LTMSistem/LTMSistem/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marcos.teixeira/Downloads/MVC/MVC/LTMSistem/LTMSistem/Views/Usuario/ApagarConfirmacao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xBcGFnYXJDb25maXJtYWNhby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marcos.teixeira/Downloads/MVC/MVC/LTMSistem/LTMSistem/Views/Usuario/Criar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xDcmlhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marcos.teixeira/Downloads/MVC/MVC/LTMSistem/LTMSistem/Views/Usuario/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xFZGl0YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marcos.teixeira/Downloads/MVC/MVC/LTMSistem/LTMSistem/Views/Usuario/Home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xIb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marcos.teixeira/Downloads/MVC/MVC/LTMSistem/LTMSistem/Views/Usuario/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marcos.teixeira/Downloads/MVC/MVC/LTMSistem/LTMSistem/Views/Usuario/Mostrar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xNb3N0cmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marcos.teixeira/Downloads/MVC/MVC/LTMSistem/LTMSistem/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marcos.teixeira/Downloads/MVC/MVC/LTMSistem/LTMSistem/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marcos.teixeira/Downloads/MVC/MVC/LTMSistem/LTMSistem/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-7ptso0wkhc
+
+[C:/Users/marcos.teixeira/Downloads/MVC/MVC/LTMSistem/LTMSistem/Views/Shared/_LayoutDeslogado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXREZXNsb2dhZG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-lzz6x69sux

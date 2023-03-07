@@ -1,0 +1,286 @@
+/*
+body {
+
+    height: 10vh;
+    -webkit-font-smoothing: antialiased;
+} 
+
+ body,
+input,
+button {
+    font: 16px Roboto, sans-serif;
+} */
+
+.contentAgenda {
+    display: grid;
+    grid-template-columns: 1.5fr 3fr;
+}
+
+.infoAgenda {
+    background: #725AC1;
+    padding: 0 20px;
+}
+
+    .infoAgenda main {
+        position: relative;
+        height: 100vh;
+    }
+
+        .infoAgenda main .agends {
+            display: grid;
+        }
+
+            .infoAgenda main .agends ::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            .infoAgenda main .agends ::-webkit-scrollbar-thumb {
+                background: rgb(0, 0, 0, 0.3);
+                border-radius: 7px;
+            }
+
+                .infoAgenda main .agends ::-webkit-scrollbar-thumb:hover {
+                    background: rgb(0, 0, 0, 0.5);
+                }
+
+            .infoAgenda main .agends span {
+                font-size: 20px;
+                font-weight: 200;
+            }
+
+            .infoAgenda main .agends button {
+                background: #564593;
+                box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+                cursor: pointer;
+            }
+
+                .infoAgenda main .agends button:hover {
+                    background: rgba(0, 0, 0, 0.3);
+                }
+
+.textoAgenda a {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+    .textoAgenda a:hover {
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+
+.infoAgenda main .agends div a span {
+    border-radius: 60px;
+    color: rgba(0, 0, 0, 1);
+    background: #fff;
+    font-weight: 500;
+    padding: 2px 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.textoAgenda p {
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 15px;
+    color: #fff;
+}
+
+
+.calendar {
+    /* display: flex; */
+    /* height: 100vh; */
+    /* flex-direction: column; */
+    background: #242038;
+    /* justify-content: space-between; */
+}
+
+    .calendar header {
+        font-size: 30px;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+.anterior, .proximo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+}
+
+    .anterior:hover, .proximo:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+        cursor: pointer;
+    }
+
+.semana {
+    font-size: 0.6cm;
+    display: flex;
+    padding: 7px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+
+.dias {
+    font-size: 0.6cm;
+    display: flex;
+    padding: 10px;
+    flex-wrap: wrap;
+    background-color: #242038;
+}
+
+.mes-anterior,
+.proximo-mes {
+    color: #918f9b;
+}
+
+.dias div {
+    padding: 40px 23px;
+    color: #fff;
+}
+
+.semana div, .dias div {
+    width: 14.28%;
+    text-align: center;
+}
+
+    .dias div:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        border-radius: 50px;
+    }
+
+
+.hoje {
+    background: #564593;
+    border-radius: 50px;
+}
+
+.selecionado {
+    background: #F7DC6F;
+    border-radius: 50px;
+}
+
+
+.evento::after {
+    content: " ";
+    background: #8D86C9;
+    width: 35px;
+    height: 10px;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: -29px;
+    border-radius: 50px;
+}
+
+.calendar header span {
+    cursor: pointer;
+}
+
+    .calendar header span:last-of-type {
+        margin-left: 35px;
+    }
+
+        .calendar header span:last-of-type:hover svg path {
+            stroke: #d0d0d0;
+        }
+
+    .calendar header span:first-of-type {
+        margin-right: 35px;
+    }
+
+        .calendar header span:first-of-type:hover svg path {
+            stroke: #d0d0d0;
+        }
+
+    .calendar header span svg {
+        display: block;
+        margin: auto;
+    }
+
+.calendar header p span {
+    margin: 0 !important;
+}
+
+.calendar main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.calendar footer {
+    width: 100%;
+    text-align: right;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 7px;
+}
+
+
+
+@media (max-width: 950px) {
+
+    .contentAgenda {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .infoAgenda main .agends div {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+        .infoAgenda main .agends div::-webkit-scrollbar {
+            height: 10px;
+        }
+
+        .infoAgenda main .agends div::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .infoAgenda main .agends div::-webkit-scrollbar-thumb {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+        }
+
+        .infoAgenda main .agends div a {
+            background: rgba(255, 255, 255, 0.40);
+            width: 200px;
+            margin-left: 20px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 auto;
+        }
+
+
+            .infoAgenda main .agends div a span {
+                background: none;
+                color: #fff;
+            }
+
+            .infoAgenda main .agends div a p {
+                font-weight: 300;
+                font-size: 18px;
+                margin: 10px 0 0 0;
+                text-align: center;
+            }
+
+    .calendar header {
+        font-size: 60px;
+    }
+
+        .calendar header p span#month {
+            width: 150px;
+            display: inline-block;
+        }
+}

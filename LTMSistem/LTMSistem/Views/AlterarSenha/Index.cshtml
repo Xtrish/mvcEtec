@@ -1,0 +1,41 @@
+﻿@model AlterarSenhaModel
+@{
+    ViewData["Title"] = "Alterar Senha";
+}
+
+
+
+
+<div class="content bg-form mt-5 shadow">
+
+    <div class="modal-body shadow">
+        <form asp-controller="AlterarSenha" asp-action="Alterar" method="post">
+
+            <div class="mb-3">
+                <label for="senhaAtual" class="form-label">Senha Atual</label>
+
+                <input type="password" asp-for="SenhaAtual" class="form-control" id="recipient-name" required placeholder="Digite a senha atual">
+                @Html.ValidationMessageFor(x => x.SenhaAtual)
+            </div>
+            <div class="mb-3">
+                <label for="novaSenha" class="form-label">Nova Senha</label>
+                <input type="password" asp-for="NovaSenha" class="form-control" id="recipient-name" required placeholder="Digite a nova">
+                @Html.ValidationMessageFor(x => x.NovaSenha)
+            </div>
+            <div class="mb-3">
+                <label for="confirmarNovaSenha" class="form-label">Nova Senha</label>
+                <input type="password" asp-for="ConfirmarNovaSenha" class="form-control" id="recipient-name" required placeholder="Digite a confimação da nova senha">
+                @Html.ValidationMessageFor(x => x.ConfirmarNovaSenha)
+            </div>
+
+            <div class="modal-footer d-flex justify-content-around">
+                <a type="button" class="btn btn-secondary btn-light  btn-outline-danger shadow"
+                   asp-controller="Home" asp-action="Index" role="button">
+                    Cancelar
+                </a>
+
+                <button type="submit" class="btn btn-success btn-color  border-0" role="button">Alterar</button>
+
+        </form>
+    </div>
+</div>

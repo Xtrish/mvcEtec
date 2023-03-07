@@ -1,0 +1,82 @@
+﻿@using LTMSistem.Enuns
+@model UsuarioModel
+
+@{
+    ViewData["Title"] = "Editar Usuário";
+}
+
+
+<div class="container">
+    <form class="bg-form mt-5 form-defult shadow-lg" asp-controller="Usuario" asp-action="Alterar" method="post">
+        <div class="row">
+            <input type="hidden" asp-for="Id" />
+            <div class="mt-3 col-md-7 mb-2 form-  p-1">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" id="nome" class="form-control" asp-for="Nome" required placeholder="Nome">
+                @Html.ValidationMessageFor(x => x.Nome)
+            </div>
+            <div class=" col-md-5 mb-2 p-1 mt-3">
+                <label for="example-date" class="form-label">Data Nascimento</label>
+                <input class="form-control" id="example-date" required asp-for="Nascimento" type="date">
+                @Html.ValidationMessageFor(x => x.Nascimento)
+            </div>
+
+            <div class="mb-3 col-md-7 p-1">
+                <label for="example-email" class="form-label">Email</label>
+                <input type="email" id="example-email" required asp-for="Email" class="form-control" placeholder="Email">
+                @Html.ValidationMessageFor(x => x.Email)
+            </div>
+            <div class="mb-3 col-md-5  p-1">
+                <label for="example-email" class="form-label">Telefone</label>
+                <input type="tel" id="example-email" asp-for="Telefone" required class="form-control" placeholder="(xx) xxxxx-xxxx">
+                @Html.ValidationMessageFor(x => x.Telefone)
+            </div>
+
+
+            <div class="col-sm-12 col-md-10 col-lg-8   mb-2  p-1">
+                <label for="example-email" class="form-label">Rua</label>
+                <input type="text" class="form-control" placeholder="Rua" asp-for="Rua" aria-label="rua">
+            </div>
+            <div class="col-sm-3 col-md-2 col-lg-4  mb-2  p-1">
+                <label for="example-email" class="form-label">Nº</label>
+                <input type="text" class="form-control" placeholder="Nº" asp-for="Numero" aria-label="numero">
+            </div>
+            <div class="col-sm-9 col-md-6 col-lg-6  mb-2  p-1">
+                <label for="example-email" class="form-label">Bairro</label>
+                <input type="text" class="form-control" placeholder="Bairro" asp-for="Bairro" aria-label="bairro">
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-6  mb-2  p-1 ">
+                <label for="example-email" class="form-label">Complemento</label>
+                <input type="text" class="form-control" placeholder="Complemento" asp-for="Complemento" aria-label="complemento">
+            </div>
+            <div class="col-sm-12 col-md-6 mb-2  p-1">
+                <label for="example-email" class="form-label">Cidade</label>
+                <input type="text" class="form-control" placeholder="Cidade" asp-for="Cidade" aria-label="cidade">
+            </div>
+            <div class="col-sm-12 col-md-6 mb-2  p-1">
+                <label for="example-email" class="form-label">Estado</label>
+                <input type="text" class="form-control" placeholder="Estado" asp-for="Estado" aria-label="estado">
+            </div>          
+            <div class="mb-12 col-md-12  p-1">
+                <label for="example-email" class="form-label">Perfil</label>
+                <select asp-for="Perfil" class="form-select" required >
+                    <option value="">Selecione</option>
+                    <option value="@PerfilEnum.Administrador">Administrador</option>
+                    <option value="@PerfilEnum.Secretaria">Secretaria</option>
+                    <option value="@PerfilEnum.Dentista">Dentista</option>
+                </select>
+                @Html.ValidationMessageFor(x => x.Perfil)
+            </div>
+        </div>
+
+
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button type="submit" class="btn btn-editar text-white btn-center" role="button">Alterar</button>
+            <a class="btn btn-warning btn-center" asp-controller="Usuario" asp-action="Mostrar" asp-route-id="@Model.Id" >Voltar</a>
+            <a class="btn btn-danger btn-center" asp-controller="Usuario" asp-action="ApagarConfirmacao" asp-route-id="@Model.Id">Apagar</a>
+
+        </div>
+    </form>
+
+</div>

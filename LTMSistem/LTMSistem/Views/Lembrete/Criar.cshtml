@@ -1,0 +1,47 @@
+﻿@model LembreteModel
+@{
+    ViewData["Title"] = "Criar Novo Lembrete";
+}
+
+<div class="container">
+    <form class="bg-form mt-5 form-defult shadow-lg" asp-controller="Lembrete" asp-action="Criar" method="post" >
+        <div class="row">
+            <div class="mt-3  mb-3 d-grid gap-2 col-12 mx-auto">
+                <h1 class="text-center fw-bold display-6">Cadastro de Lembrete</h1>
+            </div>
+            <div class="mt-3 col-md-7 mb-2 form-  p-1">
+                <label for="nome" class="form-label">Assunto</label>
+                <input type="text" id="nome" class="form-control" asp-for="Assunto" required  placeholder="Nome">
+                @Html.ValidationMessageFor(x => x.Assunto)
+            </div>
+            <div class=" col-md-5 mb-2 p-1 mt-3">
+                <label for="example-date" class="form-label">Data do lembrete</label>
+                <input class="form-control" id="example-date" required asp-for="DataDoLembrete" type="date" >
+                @Html.ValidationMessageFor(x => x.DataDoLembrete)
+            </div>           
+
+
+
+        </div>
+        <div>
+            <div class="mb-3 mb-3 p-1 ">
+                <label for="example-textarea" class="form-label">Resumo</label>
+                <textarea class="form-control" id="example-textarea" asp-for="Resumo" rows="5"></textarea>
+                @Html.ValidationMessageFor(x => x.Resumo)
+            </div>
+
+        </div>
+        <div>
+            <div class="mb-3 mb-3 p-1 ">
+                <label for="example-textarea" class="form-label">Descriçao</label>
+                <textarea class="form-control" id="example-textarea" asp-for="Descricao" rows="5"></textarea>
+                @Html.ValidationMessageFor(x => x.Descricao)
+            </div>
+
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button type="submit" class="btn btn-cadastrar text-white btn-center">Cadastrar</button>
+            <a class="btn btn-warning btn-center" asp-controller="Lembrete" asp-action="Index" >Voltar</a>
+        </div>
+    </form>
+</div>

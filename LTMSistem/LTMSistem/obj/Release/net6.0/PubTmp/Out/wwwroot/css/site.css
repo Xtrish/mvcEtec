@@ -1,0 +1,28 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.btn-editar {
+    background-color: #9d38d5 !important;
+    border-color: none;
+}
+
+.btn-cadastrar {
+    background-color: #7e437a !important;
+    border-color: none;
+}

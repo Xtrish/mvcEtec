@@ -1,0 +1,80 @@
+﻿@model PacienteModel
+@{
+    ViewData["Title"] = "Cadastro do Paciente";
+}
+
+
+<div class="container">
+    <form class="bg-form mt-5 form-defult shadow-lg" >
+        <div class="row">            
+            <div class="mt-3  mb-3 d-grid gap-2 col-12 mx-auto">
+                <h1 class="text-center fw-bold display-6">Cadastro</h1>
+            </div>
+            <div class="mt-3 col-md-7 mb-2 form-  p-1">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" id="nome" class="form-control" disabled required value="@Model.Nome">
+            </div>
+            <div class=" col-md-5 mb-2 p-1 mt-3">
+                <label for="example-date" class="form-label">Data Nascimento</label>
+                <input class="form-control" id="date"  disabled value="@Model.Nascimento.Date.ToString("dd/MM/yyyy")" /> 
+
+            </div>
+
+            <div class="mb-3 col-md-7 p-1">
+                <label for="example-email" class="form-label">Email</label>
+                <input type="email" id="example-email"  disabled Value="@Model.Email" class="form-control" placeholder="Email">
+            </div>
+            <div class="mb-3 col-md-5  p-1">
+                <label for="example-email" class="form-label">Telefone</label>
+                <input type="tel" id="example-email"  disabled value="@Model.Telefone" required class="form-control" placeholder="(xx) xxxxx-xxxx">
+            </div>
+
+            <div class="col-sm-6 col-md-5 mb-2  p-1">
+                <label for="example-email" class="form-label">Rua</label>
+                <input type="text" class="form-control" placeholder="Rua" value="@Model.Rua" disabled aria-label="rua">
+            </div>
+            <div class="col-sm-6 col-md-5 mb-2  p-1">
+                <label for="example-email" class="form-label">Bairro</label>
+                <input type="text" class="form-control" placeholder="Bairro" value="@Model.Bairro" disabled aria-label="bairro">
+            </div>
+            <div class="col-sm-5 col-md-2 mb-2  p-1">
+                <label for="example-email" class="form-label">Nº</label>
+                <input type="text" class="form-control" placeholder="Nº" value="@Model.Numero" disabled aria-label="numero">
+            </div>
+            <div class="col-sm-7 col-md-3 mb-2  p-1 ">
+                <label for="example-email" class="form-label">Complemento</label>
+                <input type="text" class="form-control" placeholder="Complemento" value="@Model.Complemento" disabled aria-label="complemento">
+            </div>
+            <div class="col-sm-6 col-md-6 mb-2  p-1">
+                <label for="example-email" class="form-label">Cidade</label>
+                <input type="text" class="form-control" placeholder="Cidade" value="@Model.Cidade" disabled aria-label="cidade">
+            </div>
+            <div class="col-sm-6 col-md-3 mb-2  p-1">
+                <label for="example-email" class="form-label">Estado</label>
+                <input type="text" class="form-control" placeholder="Estado" value="@Model.Estado" disabled aria-label="estado">
+            </div>
+        </div>
+
+
+
+        <div>
+            <div class="mb-3 mb-3 p-1 ">
+                <label for="example-textarea" class="form-label">Obs:</label>
+                <textarea class="form-control" id="example-textarea"  disabled rows="5">@Model.Observacao</textarea>
+            </div>
+
+        </div>
+
+
+
+
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <a class="btn btn-warning btn-center" asp-controller="Paciente" asp-action="Index">Voltar</a>
+            <a class="btn  btn-editar btn-center text-white " asp-controller="Paciente" asp-action="Editar" asp-route-id="@Model.Id">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen-fill" viewBox="0 0 16 16">
+                    <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001z" />
+                </svg><font style="vertical-align:inherit;" class="ms-1">Editar</font>
+            </a>
+        </div>
+    </form>
+</div>

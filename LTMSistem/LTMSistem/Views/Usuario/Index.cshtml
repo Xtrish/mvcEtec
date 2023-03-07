@@ -1,0 +1,67 @@
+﻿@model UsuarioGenericModel
+@{
+    ViewData["Title"] = "Lista de Usuários";
+}
+
+<div>
+    <div class="container bg-light mt-5 shadow">
+        <form class="row frm-pesq mt-5 p-3 rounded-3 bg-white " asp-controller="Usuario" asp-action="Index" method="get">
+            <div class="col-lg-4">
+                <input type="text" class="form-control" id="nome" asp-for="@Model.Nome" placeholder="Nome">
+            </div>
+            <div class="col-lg-4 p-3">
+                <input type="email" class="form-control" id="email" asp-for="@Model.Email" placeholder="E-mail">
+            </div>
+            <div class="col-0 col-lg-2  ">
+            </div>
+            <div class="col-lg-2  col-md-12  display-flex justify-content-center  ">
+                <button type="submit" class="btn btn-color shadow"
+                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .7rem; --bs-btn-font-size: 1rem;">
+                    Pesquisar
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <div class=" container d-grid gap-2 mt-4">
+        <a class="btn btn-success   shadow" asp-controller="Usuario" asp-action="Criar" role="button">Adicionar</a>
+    </div>
+    <div class="container bg-white mt-5 rounded-2 shadow text-center p-2">
+        <table class="table table-striped">
+            <thead class="bg-navbar text-light">
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col" class="d-none d-sm-table-cell d-md-table-cell">Perfil</th>
+                    <th scope="col" class="d-none d-md-table-cell">Telefone</th>
+                    <th></th>
+
+                </tr>
+            </thead>
+
+
+            <tbody class="table-group-divider">
+
+                @if (Model != null && Model.Usuarios.Any())
+                {
+                    foreach (UsuarioModel usuario in Model.Usuarios)
+                    {
+                        <tr>
+                            <th scope="row">@usuario.Nome</th>
+                            <td class="d-none d-sm-table-cell d-md-table-cell">@usuario.Perfil</td>
+                            <td class="d-none d-md-table-cell">@usuario.Telefone</td>
+                            <td>
+                                <div>
+                                    <a asp-controller="Usuario" asp-action="Mostrar" asp-route-id="@usuario.Id" class="btn btn-outline-success">Ver</a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                }
+
+
+
+
+            </tbody>
+        </table>
+    </div>
+</div>

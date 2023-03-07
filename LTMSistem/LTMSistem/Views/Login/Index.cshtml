@@ -1,0 +1,49 @@
+﻿@model LoginModel
+@{
+    Layout = "_LayoutDeslogado";
+    ViewData["Title"] = "Login";
+}
+
+<div class="main-container">
+
+    <div class="logo">
+
+        <img src="~/imagens/logo.png">
+
+    </div>
+
+
+    <div class="div-element first-element">
+
+
+        <form asp-controller="Login" asp-action="Entrar">
+
+
+            <p class="text-p-color ">Autenticação</p>
+
+            <div class="form-floating">
+                <div class="input-icons">
+                    <i class="bi bi-envelope i-custm"></i>
+                    <input type="email" class="form-control" asp-for="Email" required id="floatingInput">
+                </div>
+                    @Html.ValidationMessageFor(x => x.Email)
+
+
+                <div class="form-floating">
+                    <div class="input-icons">
+                        <i class="bi bi-lock i-custm"></i>
+                        <input type="password" class="form-control" asp-for="Senha" required id="floatingPassword">
+                    </div>
+                        @Html.ValidationMessageFor(x => x.Senha)
+
+                   
+                    <button class="btn-login" type="submit">ENTRAR</button>
+
+                    <a asp-controller="Login" asp-action="RedefinirSenha"  > Esqueci minha senha</a>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+</div>

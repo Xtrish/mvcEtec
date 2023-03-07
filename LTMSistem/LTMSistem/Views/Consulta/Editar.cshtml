@@ -1,0 +1,92 @@
+﻿@using LTMSistem.Enums
+@using LTMSistem.Enuns
+@model ConsultaModel
+@{
+    ViewData["Title"] = "Editar Consulta";
+}
+
+<div class="container">
+    <form class="bg-form mt-5 form-defult shadow-lg" asp-controller="Consulta" asp-action="Alterar" method="post">
+        <div class="row">
+            <input type="hidden" asp-for="Id"></input>
+            <div class="mt-3  mb-3 d-grid gap-2 col-12 mx-auto">
+                <h1 class="text-center fw-bold display-6">Editar de Consultas</h1>
+            </div>
+
+            <div class=" col-md-12 mb-2 p-1 mt-3">
+                <label class="form-label" for="inputGroupSelect01">Dentistas</label>
+                <select class="form-select" id="inputGroupSelect01" required asp-for="DentistaId">
+                    <option value="@Model.DentistaId" selected>Selecione...</option>
+                    @foreach (var dentista in Model.Dentistas)
+                    {
+                        <option value="@dentista.Id">@dentista.Nome</option>
+                    }
+                </select>
+                @Html.ValidationMessageFor(x => x.DentistaId)
+            </div>
+            <div class=" col-md-7 mb-2 p-1 mt-3">
+                <label for="example-date" class="form-label">Data da consulta</label>
+                <input class="form-control" id="example-date" required type="datetime" asp-for="DataConsulta" value="@Model.DataConsulta.ToString("dd/MM/yyyy HH:mm")">
+                @Html.ValidationMessageFor(x => x.DataConsulta)
+            </div>
+            <div class=" col-md-5 mb-2 p-1 mt-3">
+                <label for="example-date" class="form-label">Duração</label>
+                <input class="form-control" id="example-date" required type="time" asp-for="DuracaoConsulta" value="@Model.DuracaoConsulta.ToString("HH:mm")">
+            </div>
+            @Html.ValidationMessageFor(x => x.DuracaoConsulta)
+
+
+
+
+            <div class=" col-md-12 mb-2 p-1 mt-3">
+                <label class="form-label" for="inputGroupSelect01">Pacientes</label>
+                <select class="form-select" required id="inputGroupSelect01" asp-for="PacienteId">
+                    <option value="@Model.PacienteId" selected>Selecione...</option>
+                    @foreach (var paciente in Model.Pacientes)
+                    {
+                        <option value="@paciente.Id">@paciente.Nome</option>
+                    }
+                </select>
+                @Html.ValidationMessageFor(x => x.PacienteId)
+            </div>
+
+
+
+
+
+
+            <div class="mb-12 col-md-6  p-1">
+                <label for="example-email" class="form-label">Procedimento</label>
+                <select asp-for="Procedimento" class="form-select" required>
+                    <option value="2Model.procedimento">Selecione...</option>
+                    <option value="@ProcedimentoEnum.Limpeza">Limpeza</option>
+                    <option value="@ProcedimentoEnum.Restauracao ">Restauracao</option>
+                    <option value="@ProcedimentoEnum.Extracao">Extracao</option>
+                    <option value="@ProcedimentoEnum.Avaliação">Avaliação</option>
+
+
+
+                </select>
+                @Html.ValidationMessageFor(x => x.Procedimento)
+            </div>
+
+
+            <div class="mb-3 col-md-12  p-1">
+                <label for="example-email" class="form-label">Obs</label>
+                <textarea class="form-control" id="example-textarea" asp-for="Observacao" rows="5"></textarea>
+            </div>
+
+
+        </div>
+
+
+
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button type="submit" class="btn btn-editar btn-center text-white">Salvar</button>
+            <a class="btn btn-warning btn-center" asp-controller="Consulta" asp-action="Mostrar" asp-route-id="@Model.Id">Voltar</a>
+
+            <a class="btn btn-danger btn-center" asp-controller="Consulta" asp-action="ApagarConfirmacao" asp-route-id="@Model.Id">Apagar</a>
+        </div>
+    </form>
+</div>
+

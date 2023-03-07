@@ -1,0 +1,11 @@
+﻿@model LembreteModel
+@{
+    ViewData["Title"] = "Confirmação de apagar Lembrete";
+}
+
+<div class=" bg-white mt-5  text-center p-5 rounded-3"> 
+    <h1 class="m-5"> Deseja realmente apagar o lembrete (@Model.Assunto)?</h1>
+
+    <a class="btn btn-danger btn-center" role="button" asp-controller="Lembrete" asp-action="Apagar" asp-route-id="@Model.Id">Apagar</a>
+    <a class="btn btn-warning btn-center" role="button" asp-controller="Lembrete" asp-action="Editar" asp-route-id="@Model.Id">Cancelar</a>
+</div>

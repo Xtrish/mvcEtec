@@ -1,0 +1,48 @@
+﻿@model List<LembreteModel>
+@{
+    ViewData["Title"] = "Lembrentes do Dia";
+}
+
+
+<div class=" container d-grid gap-2 mt-4">
+    <a class="btn btn-success" asp-controller="Lembrete" asp-action="Criar" role="button">Adicionar</a>
+</div>
+<div class="container bg-white mt-5 rounded-2 shadow text-center p-2">
+    <table class="table table-striped">
+        <thead class="bg-navbar text-light">
+            <tr>
+                <th scope="col">Assunto</th>
+                <th scope="col" class="d-none d-md-table-cell">Data</th>
+                <th scope="col" class="d-none d-md-table-cell">Status</th>
+                <th></th>
+
+            </tr>
+        </thead>
+
+
+        <tbody class="table-group-divider">
+
+            @if (Model != null && Model.Any())
+            {
+                foreach (LembreteModel lembrete in Model)
+                {
+                    <tr @(lembrete.DataDoLembrete.Date<DateTime.Now.Date? $"class=bg-warning\tbg-opacity-50\ttext-decoration-line-through":"")>
+                        <th scope="row">@lembrete.Assunto</th>
+                        <td class="d-none d-md-table-cell">@lembrete.DataDoLembrete.Date.ToString("dd/MM/yyyy")</td>
+                        <td>
+                            <div>
+                                <a asp-controller="Lembrete" asp-action="Mostrar" asp-route-id="@lembrete.Id" class="btn btn-outline-primary">Ver</a>
+                                <a class="btn btn-outline-success" asp-controller="Lembrete" asp-action="ConcluirLembrete" asp-route-id="@lembrete.Id">Concluir</a>
+                               
+                            </div>
+                        </td>
+                    </tr>
+                }
+            }
+
+
+
+
+        </tbody>
+    </table>
+</div>
